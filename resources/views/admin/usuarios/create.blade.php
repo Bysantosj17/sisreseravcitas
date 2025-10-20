@@ -24,7 +24,10 @@
                                 <div class="col-md-12">
                                     <div class="form group">
                                         <label for="">Nombre del usuario:</label> <b>*</b>
-                                        <input type="text" name="name" class="form-control" required>
+                                        <input type="text" value="{{ old('name') }}" name="name" class="form-control" required>
+                                        @error('name')
+                                            <small class="text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +35,10 @@
                                 <div class="col-md-12">
                                     <div class="form group">
                                         <label for="">Correo electronico:</label> <b>*</b>
-                                        <input type="email" name="email" class="form-control" required>
+                                        <input type="email" value="{{ old('email') }}" name="email" class="form-control" required>
+                                        @error('email')
+                                            <small class="text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +46,10 @@
                                 <div class="col-md-12">
                                     <div class="form group">
                                         <label for="">Contraseña:</label> <b>*</b>
-                                        <input type="password" name="password" class="form-control" required>
+                                        <input type="password" value="{{ old('password') }}" name="password" class="form-control" required>
+                                        @error('password')
+                                            <small class="text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +57,10 @@
                                 <div class="col-md-12">
                                     <div class="form group">
                                         <label for="">Verificar contraseña:</label> <b>*</b>
-                                        <input type="password" name="password_confirmation" class="form-control" required>
+                                        <input type="password" value="{{ old('password_confirmation') }}" name="password_confirmation" class="form-control" required>
+                                        @error('password_confirmation')
+                                            <small class="text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
