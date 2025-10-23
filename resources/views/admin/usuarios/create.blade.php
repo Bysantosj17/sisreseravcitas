@@ -14,8 +14,6 @@
                 <div class="card-header">
                     <h3 class="card-title">Llene los datos </h3>
                 </div>
-
-
                 <div class="card-body">
                     <form action="" method="POST">
                         @csrf
