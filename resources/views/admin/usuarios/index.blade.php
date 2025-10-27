@@ -47,14 +47,14 @@
                             <?php $contador = 1; ?>
                             @foreach ($usuarios as $usuario)
                                 <tr>
-                                    <td class="text-center">{{ $contador++ }}</td>
+                                    <td class="text-center">{{ $contador++}}</td>
                                     <td>{{ $usuario->name }}</td>
                                     <td>{{ $usuario->email }}</td>
-                                    <td>
+                                    <td class="text-center">
                                         <div class="btn-group" role="group" aria-label="Basic example" >
-                                            <button type="button" class="btn btn-info"><i class="bi bi-eye"></i></button>
-                                            <button type="button" class="btn btn-success">Editar</button>
-                                            <button type="button" class="btn btn-danger">Borrar</button>
+                                            <a href="{{ url('admin/usuarios/' . $usuario->id) }}" type="button" class="btn btn-info"><i class="bi bi-eye"></i></a>
+                                            <button type="button" class="btn btn-success"><i class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-danger"><i class="bi bi-pencil-square"></i></button>
                                         </div>
                                     </td>
                                 </tr>
