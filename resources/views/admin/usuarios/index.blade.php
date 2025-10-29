@@ -53,8 +53,8 @@
                                     <td class="text-center">
                                         <div class="btn-group" role="group" aria-label="Basic example" >
                                             <a href="{{ url('admin/usuarios/' . $usuario->id) }}" type="button" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                                            <button type="button" class="btn btn-success"><i class="bi bi-trash"></i></button>
-                                            <button type="button" class="btn btn-danger"><i class="bi bi-pencil-square"></i></button>
+                                            <a href="{{ url('admin/usuarios/' . $usuario->id . '/edit') }}" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                                            <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
                                         </div>
                                     </td>
                                 </tr>

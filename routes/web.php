@@ -37,5 +37,14 @@ Route::get('/admin/usuarios/create', [App\Http\Controllers\UsuarioController::cl
 Route::post('/admin/usuarios/create', [App\Http\Controllers\UsuarioController::class, 'store'])
     ->name('admin.usuarios.store')->middleware('auth');
 
+//ruta para mostrar usuario
 Route::get('/admin/usuarios/{id}', [App\Http\Controllers\UsuarioController::class, 'show'])
     ->name('admin.usuarios.show')->middleware('auth');
+
+//ruta para editar usuario
+Route::get('/admin/usuarios/{id}/edit', [App\Http\Controllers\UsuarioController::class, 'edit'])
+    ->name('admin.usuarios.edit')->middleware('auth');
+
+//ruta para usuario
+Route::put('/admin/usuarios/{id}', [App\Http\Controllers\UsuarioController::class, 'update'])
+    ->name('admin.usuarios.update')->middleware('auth');
