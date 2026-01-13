@@ -105,7 +105,7 @@
                                 <div class="form group">
                                     <label for="">Verificar contraseña:</label> <b>*</b>
                                     <input type="password" value="{{ old('password_confirmation') }}"
-                                        name="password_confirmation" class="form-control" required>
+                                        name="password_confirmation" class="form-control">
                                     @error('password_confirmation')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror

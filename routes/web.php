@@ -59,19 +59,27 @@ Route::delete('/admin/usuarios/{id}', [App\Http\Controllers\UsuarioController::c
 //rutas para el admin - secretarias
 Route::get('/admin/secretarias', [App\Http\Controllers\SecretariaController::class, 'index'])
     ->name('admin.secretarias.index')->middleware('auth');
+
 //ruta para el crear-secretaria
 Route::get('/admin/secretarias/create', [App\Http\Controllers\SecretariaController::class, 'create'])
     ->name('admin.secretarias.create')->middleware('auth');
+
 //ruta para almacenar secretaria
 Route::post('/admin/secretarias/create', [App\Http\Controllers\SecretariaController::class, 'store'])
     ->name('admin.secretarias.store')->middleware('auth');
+
 //ruta para mostrar secretaria
 Route::get('/admin/secretarias/{id}', [App\Http\Controllers\SecretariaController::class, 'show'])
     ->name('admin.secretarias.show')->middleware('auth');
+
 //ruta para editar secretaria
 Route::get('/admin/secretarias/{id}/edit', [App\Http\Controllers\SecretariaController::class, 'edit'])
     ->name('admin.secretarias.edit')->middleware('auth');
+
 //ruta para secretaria
 Route::put('/admin/secretarias/{id}', [App\Http\Controllers\SecretariaController::class, 'update'])
     ->name('admin.secretarias.update')->middleware('auth');
+
 //Eliminar secretaria
+Route::get('admin/secretarias/{id}/confir-delete', [App\Http\Controllers\SecretariaController::class, 'confirmDelte'])
+->name('admin.secretarias.ConfiDelte')->middleware('auth');

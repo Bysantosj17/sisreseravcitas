@@ -62,7 +62,7 @@
                                         <div class="btn-group" role="group" aria-label="Basic example" >
                                             <a href="{{ url('admin/secretarias/' . $secretaria->id) }}" type="button" class="btn btn-info"><i class="bi bi-eye"></i></a>
                                             <a href="{{ url('admin/secretarias/' . $secretaria->id . '/edit') }}" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="{{ url('admin/secretarias/' . $secretaria->id . '/coneliminar') }}" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                                            <a href="{{ url('admin/secretarias/' . $secretaria->id . '/confir-delete') }}" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
